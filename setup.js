@@ -1,6 +1,7 @@
 var config = {
   //   msecsInterval: 500,
-    msecsInterval: 1000,
+  // msecsInterval: 1000,
+  msecsInterval: 3000,
   urls: [
     {
       text: 'Decay -- Imagining reviving soil ecostructures beneath cities...',
