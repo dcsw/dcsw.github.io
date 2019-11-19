@@ -1,5 +1,6 @@
 var config = {
-//   msecsInterval: 500,
+  //   msecsInterval: 500,
+    msecsInterval: 1000,
   urls: [
     {
       text: 'Decay -- Imagining reviving soil ecostructures beneath cities...',
@@ -19,7 +20,7 @@ var config = {
     },
     {
       text: 'Acequia Erosion Module -- Creating modules to mitigate erosion on the Ditch system of the Rio Grande, New Mexico.',
-      url: './media/Acquea\\ Erosion\\ Modules  .jpg'
+      url: './media/Acquea\\ Erosion\\ Modules.jpg'
     },
     {
       text: 'Ceramic cups and Eggshells dyed with Beet, Cabbage, and Turmeric dyes, set with vinegar.',
@@ -67,7 +68,7 @@ var config = {
     },
     {
       text: 'A form study in ceramic sculpture and food production, on symbiosis between growth and consumption',
-      url: './media/Cradle Full.jpg'
+      url: './media/Cradle\\ Full.jpg'
     },
     {
       text: 'Air Plant Vase',
