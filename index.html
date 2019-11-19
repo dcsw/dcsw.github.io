@@ -212,9 +212,10 @@
   </div>
 
   <!--[if gte IE 9]><!-->
+  <script src="setup.js"></script>
   <script>
     function kbSlideshow() { // set .fx1 class on 1st img on page load
-      window.setInterval(kenBurns, 4000); // calls kenBurns() function every 4 secs
+      window.setInterval(kenBurns, config.msecsInterval || 4000); // calls kenBurns() function every 4 secs
       var images = document.getElementById('slideshow').getElementsByTagName('div'),
         numberOfImages = images.length, i = 0; // track loop - 1 (not 0) as 1st img is styled on page load
       images[0].className = "fx"; // style 1st img on page load
@@ -227,19 +228,7 @@
     }
     setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 
-    var urls = [
-      { text: "Decay -- Imagining reviving soil ecostructures beneath cities...", url: "./photos/Decay.jpg" },
-      { text: "Test Slides...", url: "./photos/Test\\ Slides.jpg" },
-      { text: "Generative Drawing", url: "./photos/Generative\\ Drawing.jpg" },
-      { text: "Modular Screen", url: "./photos/Modular\\ Screen.jpg" },
-      { text: "Acequia Erosion Module -- Creating modules to mitigate erosion on the Ditch system of the Rio Grande, New Mexico.", url: "./photos/Acquea\\ Erosion\\ Modules  .jpg" },
-      { text: "Ceramic cups and Eggshells dyed with Beet, Cabbage, and Turmeric dyes, set with vinegar.", url: "./photos/Ceramic\\ Cups\\ and\\ Eggshells\\ vegetable\\ dyed.jpg" },
-      { text: "Decay Digression", url: "./photos/Decay\\ Digression.jpg" },
-      { text: "Cradle", url: "./photos/Cradle.jpg" },
-      { text: "Decay Digression", url: "./photos/Decay\\ Digression\\ 2.jpg" },
-      { text: "Decay...", url: "./photos/Decay....jpg" },
-      { text: "Decay assembled...", url: "./photos/Decay\\ assembled....jpg" },
-    ];
+    var urls = config.urls;
 
     var slideshowElement = document.getElementById('slideshow');
     var styleElement = document.querySelector('head > style');
