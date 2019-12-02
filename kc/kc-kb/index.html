@@ -110,9 +110,9 @@
     }
 
     #slideshow .fx {
-      -webkit-transform: scale(1.35) translate(2.5%);
-      -ms-transform: scale(1.35) translate(2.5%);
-      transform: scale(1.35) translate(2.5%);
+      -webkit-transform: scale(1.25) translate(2.5%);
+      -ms-transform: scale(1.25) translate(2.5%);
+      transform: scale(1.25) translate(2.5%);
       opacity: 1
     }
 
@@ -214,7 +214,7 @@
   <!--[if gte IE 9]><!-->
   <script src="setup.js"></script>
   <script>
-    function kbSlideshow() { // set .fx1 class on 1st img on page load
+    function startKBSlideshow() { // set .fx1 class on 1st img on page load
       window.setInterval(kenBurns, config.msecsInterval || 4000); // calls kenBurns() function every 4 secs
       var images = document.getElementById('slideshow').getElementsByTagName('div'),
         numberOfImages = images.length, i = 0; // track loop - 1 (not 0) as 1st img is styled on page load
@@ -226,12 +226,11 @@
         if (i == numberOfImages) { i = 0; }
       }
     }
-    setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 
-    var urls = config.urls;
 
     var slideshowElement = document.getElementById('slideshow');
     var styleElement = document.querySelector('head > style');
+    var urls = config.urls;
     urls.forEach((u, idx) => {
       styleElement.innerText += `#slideshow div:nth-of-type(${idx + 1}) { background-image: url(${u.url}); }`;
       var divImage = document.createElement('div');
@@ -241,6 +240,7 @@
       slideshowElement.appendChild(spanText);
     });
 
+    setTimeout(startKBSlideshow, 1); // short delay so CSS transforms work on 1st img
   </script>
   <!--<![endif]-->
 
