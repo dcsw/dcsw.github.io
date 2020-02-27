@@ -1,6 +1,7 @@
 var config = {
   //   msecsInterval: 500,
   // msecsInterval: 1000,
+  // msecsInterval: 3000,
   msecsInterval: 9000,
   urls: [
     {
